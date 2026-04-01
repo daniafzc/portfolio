@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit } from "next/font/google";
+import { Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import ResponsiveNav from "./components/Navbar/ResponsiveNav";
+import Footer from "./components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const outfit = Outfit({
+  variable: "--font-outfit",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
 });
 
@@ -25,9 +28,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${outfit.variable} ${bricolage.variable} h-full antialiased`}
+      style={
+        { "--font-outfit": outfit.style.fontFamily } as React.CSSProperties
+      }
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="antialised bg-[#0d0d1f]">
+        <ResponsiveNav />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
