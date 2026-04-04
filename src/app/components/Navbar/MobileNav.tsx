@@ -13,28 +13,47 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
 
   return (
     <div>
-      {/* overlay */}
+      {/* Overlay */}
       <div
-        className={`fixed inset-0 ${navOpen} transform transition-all right-0 duration-500 z-[100002] bg-black opacity-70 w-full h-screen`}
-      ></div>
-      {/* navlinks */}
+        onClick={closeNav}
+        className={`fixed inset-0 z-[100002] transition-all duration-500 ${
+          showNav
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        }`}
+        style={{
+          background: "rgba(26, 39, 68, 0.4)",
+          backdropFilter: "blur(2px)",
+        }}
+      />
+
+      {/* Drawer */}
       <div
-        className={`text-white ${navOpen} fixed justify-center flex flex-col h-full transform transition-all duration-500 delay-300 w-[80%] sm:w-[60%] bg-cyan-800 space-y-6 z-[100050] right-0`}
+        className={`fixed top-4 right-4 bottom-4 z-[100050] w-[75%] sm:w-[55%] max-w-sm rounded-2xl flex flex-col justify-center space-y-8 transform transition-all duration-500 ${navOpen}`}
+        style={{
+          background: "rgba(196, 235, 241, 0.6)",
+          backdropFilter: "blur(20px)",
+          WebkitBackdropFilter: "blur(20px)",
+          border: "0.5px solid rgba(143, 199, 215, 0.5)",
+          boxShadow: "0 8px 40px rgba(58, 159, 214, 0.15)",
+        }}
       >
-        {NavLinks.map((link) => {
-          return (
-            <Link key={link.id} href={link.url}>
-              <p className="text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px]">
-                {link.label}
-              </p>
-            </Link>
-          );
-        })}
-        {/* cross icon */}
-        <CgClose
+        {NavLinks.map((link) => (
+          <Link key={link.id} href={link.url} onClick={closeNav}>
+            <p className="text-[#1a2744] w-fit text-2xl sm:text-3xl ml-10 border-b-[1.5px] pb-1 border-[#3a9fd6] font-semibold tracking-wide hover:text-[#3a9fd6] transition-colors duration-200">
+              {link.label}
+            </p>
+          </Link>
+        ))}
+
+        {/* Close button */}
+        <button
           onClick={closeNav}
-          className="absolute top-[0.7rem] right-[1.4rem] sm:w-8 sm:h-8 w-6 h-6"
-        />
+          className="absolute top-4 right-4 text-[#1a2744] hover:text-[#3a9fd6] transition-colors duration-200"
+          aria-label="Close menu"
+        >
+          <CgClose className="w-6 h-6 sm:w-7 sm:h-7" />
+        </button>
       </div>
     </div>
   );

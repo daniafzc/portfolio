@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #15173d;
-  --foreground: #ededed;
-  --secondary: #db2777;
-  --accent: ##fbbf24;
-  --primary: #c576f6;
+  --background: #f0f8ff;
+  --foreground: #1a2744;
+  --secondary: #ffd301;
+  --accent: #8fc7b7;
+  --primary: #3a9fd6;
+  --card-bg: rgba(196, 235, 241, 0.25);
+  --card-border: rgba(143, 199, 215, 0.4);
 }
 
 @theme inline {
@@ -13,20 +15,9 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --color-tertiary: var(--tertiary);
   --color-accent: var(--accent);
   --font-sans: var(--font-outfit);
   --font-heading: var(--font-bricolage);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #15173d;
-    --foreground: #ededed;
-    --secondary: #db2777;
-    --accent: ##fbbf24;
-    --primary: #0091ff;
-  }
 }
 
 html {
@@ -35,18 +26,23 @@ html {
 
 body {
   font-family: var(--font-outfit), sans-serif;
+  background-color: #f0f8ff;
+  color: var(--foreground);
+  overflow-x: hidden;
 }
 
 .top-blur {
-  @apply fixed w-[50vw] h-[50vw] min-w-[350px] top-[-128px] left-[-2vw] rounded-[764px] blur-[150px] z-1 bg-[rgba(37,99,235,0.2)];
+  @apply fixed w-[50vw] h-[50vw] min-w-[350px] top-[-128px] left-[-2vw] rounded-[764px] blur-[150px] z-[-1];
+  background: rgba(146, 214, 236, 0.45);
 }
 
 .bottom-blur {
-  @apply fixed w-[70vw] h-[50vw] min-w-[350px] top-[246px] right-[-25vw] rounded-[764px] blur-[150px] z-0 bg-[rgba(219,39,119,0.2)];
+  @apply fixed w-[70vw] h-[50vw] min-w-[350px] top-[246px] right-[-25vw] rounded-[764px] blur-[150px] z-[-1];
+  background: rgba(255, 211, 1, 0.25);
 }
 
 .gradient-text {
-  @apply text-white from-green-400 to-blue-500; /*BLM LENGKAP*/
+  @apply from-sky-400 to-blue-600;
 }
 
 .icon-faded {
@@ -54,19 +50,42 @@ body {
 }
 
 .glass-text-bg {
-  @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl px-4;
+  @apply backdrop-blur-md rounded-3xl px-4;
+  background: rgba(173, 216, 230, 0.3);
+  border: 1px solid rgba(143, 199, 215, 0.5);
+  color: #1a2744;
 }
 
 .card {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(232, 22, 22, 0);
-  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  background: rgba(196, 235, 241, 0.2);
+  border: 0.5px solid rgba(143, 199, 215, 0.4);
 }
 
 .card-dark {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(0, 0, 0, 0.6);
-  border: 0.5px solid rgba(255, 255, 255, 0.3);
+  background: rgba(173, 216, 230, 0.18);
+  border: 0.5px solid rgba(143, 199, 215, 0.45);
+}
+
+@media (max-width: 640px) {
+  .top-blur {
+    width: 100vw;
+    height: 100vw;
+    top: -80px;
+    left: -20vw;
+    filter: blur(80px);
+    background: rgba(146, 214, 236, 0.35);
+  }
+
+  .bottom-blur {
+    width: 120vw;
+    height: 100vw;
+    top: 350px;
+    right: -50vw;
+    filter: blur(80px);
+    background: rgba(255, 211, 1, 0.15);
+  }
 }

@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React from "react";
 import { NavLinks } from "@/app/constant/constant";
 import Link from "next/link";
 import { HiBars3BottomRight } from "react-icons/hi2";
@@ -10,54 +9,48 @@ type Props = {
 };
 
 const Navbar = ({ openNav }: Props) => {
-  const [navBg, setNavBg] = useState(false);
-
-  useEffect(() => {
-    const handler = () => {
-      if (window.scrollY >= 90) setNavBg(true);
-      if (window.scrollY < 90) setNavBg(false);
-    };
-
-    window.addEventListener("scroll", handler);
-
-    return () => {
-      window.removeEventListener("scroll", handler);
-    };
-  });
-
   return (
-    <div
-      className={`transition-all ${navBg ? "bg-[#0f142ed9] shadow-md" : ""} duration-200 h-[12vh] z-[10000] fixed w-full`}
-    >
-      <div className="flex items-center h-full w-[80%] mx-auto">
-        {/* Logo - left */}
-        <div className="flex items-center">
-          <h1 className="text-xl hidden sm:block md:text-2xl text-white font-bold font-heading">
-            Dani's
-          </h1>
-        </div>
+    <div className="fixed top-5 left-0 right-0 z-[10000] flex justify-center px-5 sm:px-10">
+      <nav
+        className="w-full max-w-4xl flex items-center justify-between px-6 sm:px-8 py-3 rounded-2xl"
+        style={{
+          background: "rgba(196, 235, 241, 0.3)",
+          backdropFilter: "blur(16px)",
+          WebkitBackdropFilter: "blur(16px)",
+          border: "0.5px solid rgba(143, 199, 215, 0.5)",
+          boxShadow: "0 4px 30px rgba(58, 159, 214, 0.1)",
+        }}
+      >
+        {/* Logo */}
+        <h1
+          className="text-xl sm:text-2xl font-bold font-heading"
+          style={{
+            background: "linear-gradient(90deg, #1a2744, #FFD301)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Dani's
+        </h1>
 
-        {/* Nav links - center */}
-        <div className="hidden lg:flex items-center space-x-10 absolute left-1/2 -translate-x-1/2">
+        {/* Desktop nav links */}
+        <div className="hidden lg:flex items-center space-x-8">
           {NavLinks.map((link) => (
             <Link
               key={link.id}
               href={link.url}
-              className="hover:text-cyan-300 text-white font-medium transition-all duration-200"
+              className="text-[#1a2744] font-medium text-base transition-colors duration-200 hover:text-[#3a9fd6]"
             >
-              <p>{link.label}</p>
+              {link.label}
             </Link>
           ))}
         </div>
 
-        {/* Burger - right (always pushed to end) */}
-        <div className="ml-auto lg:hidden">
-          <HiBars3BottomRight
-            onClick={openNav}
-            className="w-8 h-8 cursor-pointer text-white"
-          />
-        </div>
-      </div>
+        {/* Mobile burger */}
+        <button className="lg:hidden" onClick={openNav} aria-label="Open menu">
+          <HiBars3BottomRight className="w-7 h-7 text-[#1a2744]" />
+        </button>
+      </nav>
     </div>
   );
 };
