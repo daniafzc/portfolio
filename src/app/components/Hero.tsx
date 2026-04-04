@@ -23,7 +23,6 @@ const Hero = () => {
                 loop: true,
                 delay: 100,
                 deleteSpeed: 80,
-                pauseFor: 2000,
                 cursor: "|",
                 wrapperClassName:
                   "bg-gradient-to-r from-[#1a2744] to-[#1a2744] bg-clip-text text-transparent",

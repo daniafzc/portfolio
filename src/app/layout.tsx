@@ -16,8 +16,8 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  title: "Dania Hafiza — Portfolio",
-  description: "Frontend Developer & CS Student",
+  title: "Dania Hafiza's Portfolio",
+  description: "Frontend Developer",
 };
 
 export default function RootLayout({
