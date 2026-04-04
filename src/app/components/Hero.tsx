@@ -17,9 +17,14 @@ const Hero = () => {
           Welcome to <br />
           <span className="text-transparent bg-gradient-to-r from-[#1a2744] to-[#FFD301] bg-clip-text font-heading">
             <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Dani's Portfolio")
+                  .pauseFor(2000)
+                  .deleteAll()
+                  .start();
+              }}
               options={{
-                strings: ["Dani's Portfolio"],
-                autoStart: true,
                 loop: true,
                 delay: 100,
                 deleteSpeed: 80,
