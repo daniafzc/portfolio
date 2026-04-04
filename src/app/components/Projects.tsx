@@ -1,57 +1,21 @@
 import React from "react";
-import Image from "next/image";
+import projects from "../data/projects.json";
+import ProjectCard from "./ProjectCard";
 
-const Projects = () => {
+export default function Projects() {
   return (
-    <div className="py-16 text-white" data-aos="fade-up" data-aos-delay="400">
-      <h1 className="text-center text-2xl md:text-4xl lg:text-5xl font-bold">
-        Projects
+    <section
+      id="projects"
+      className="min-h-screen flex flex-col px-5 sm:px-10 md:px-20 lg:px-30 pt-16 sm:pt-20 md:pt-30 mb-20 sm:mb-40"
+    >
+      <h1 className="font-heading text-2xl md:text-4xl lg:text-5xl font-bold text-gray-100 tracking-wide pb-6 sm:pb-10 text-center">
+        PROJECTS
       </h1>
-      <div className="w-[70%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
-        <div>
-          <Image
-            src="/mockupproject.jpg"
-            alt="img"
-            width={800}
-            height={650}
-            className="rounded-lg"
-          />
-          <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
-            Diagonals
-          </h1>
-          <h1 className="pt-2 font-medium text-white ">NextJS, Tailwind</h1>
-        </div>
-
-        <div>
-          <Image
-            src="/mockupproject.jpg"
-            alt="img"
-            width={800}
-            height={650}
-            className="rounded-lg"
-          />
-          <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
-            Dummy Event Website
-          </h1>
-          <h1 className="pt-2 font-medium text-white ">NextJS, Tailwind</h1>
-        </div>
-
-        <div>
-          <Image
-            src="/mockupproject.jpg"
-            alt="img"
-            width={800}
-            height={650}
-            className="rounded-lg"
-          />
-          <h1 className="mt-4 text-xl sm:text-2xl font-semibold text-white">
-            Typecounter
-          </h1>
-          <h1 className="pt-2 font-medium text-white ">NextJS, Tailwind</h1>
-        </div>
+      <div className="w-full sm:w-[90%] md:w-[80%] mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 mt-8 sm:mt-12 md:mt-16">
+        {projects.map((project, id) => (
+          <ProjectCard key={id} project={project} />
+        ))}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default Projects;
+}

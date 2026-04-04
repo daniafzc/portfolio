@@ -1,12 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --secondary: #576cbc;
-  --tertiary: #132a53;
-  --accent: #a5d7e8;
-  --primary: #04152d;
+  --background: #15173d;
+  --foreground: #ededed;
+  --secondary: #db2777;
+  --accent: ##fbbf24;
+  --primary: #c576f6;
 }
 
 @theme inline {
@@ -24,10 +23,9 @@
   :root {
     --background: #15173d;
     --foreground: #ededed;
-    --secondary: #e491c9;
-    --tertiary: #132a53;
-    --accent: #a5d7e8;
-    --primary: #982598;
+    --secondary: #db2777;
+    --accent: ##fbbf24;
+    --primary: #0091ff;
   }
 }
 
@@ -40,11 +38,11 @@ body {
 }
 
 .top-blur {
-  @apply absolute w-[50vw] h-[50vw] min-w-[350px] top-[-128px] left-[10vw] rounded-[764px] blur-[100px] z-1 bg-[rgba(25,55,109,0.7)];
+  @apply fixed w-[50vw] h-[50vw] min-w-[350px] top-[-128px] left-[-2vw] rounded-[764px] blur-[150px] z-1 bg-[rgba(37,99,235,0.2)];
 }
 
 .bottom-blur {
-  @apply absolute w-[70vw] h-[50vw] min-w-[350px] top-[246px] right-[-25vw] rounded-[764px] blur-[100px] z-0 bg-[rgba(25,55,109,0.7)];
+  @apply fixed w-[70vw] h-[50vw] min-w-[350px] top-[246px] right-[-25vw] rounded-[764px] blur-[150px] z-0 bg-[rgba(219,39,119,0.2)];
 }
 
 .gradient-text {
@@ -57,4 +55,18 @@ body {
 
 .glass-text-bg {
   @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl px-4;
+}
+
+.card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(232, 22, 22, 0);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-dark {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.6);
+  border: 0.5px solid rgba(255, 255, 255, 0.3);
 }

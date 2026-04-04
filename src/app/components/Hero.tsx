@@ -4,35 +4,33 @@ import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   return (
-    <div className="relative h-screen flex items-center justify-center text-white overflow-hidden">
+    <div className="relative h-screen flex items-center justify-center text-white overflow-hidden px-4">
       <div className="relative z-10 flex flex-col items-center">
         <h1
           data-aos="fade-up"
           data-aos-delay="400"
-          className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 text-center font-bold tracking-wide"
+          className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl my-4 sm:my-6 text-center font-extrabold leading-tight sm:leading-[1.15]"
         >
-          Welcome to <br /> <span className="text-cyan-200">Dani's</span>{" "}
-          Portfolio
-        </h1>
-        <h2 className="mt-5 text-sm px-2 text-center sm:text-2xl font-medium flex items-center">
-          Always eager to learn! - As
-          <span className="text-cyan-200 font-bold font-heading">
+          Welcome to <br />
+          <span className="text-transparent bg-gradient-to-r from-foreground to-primary bg-clip-text font-heading">
             <Typewriter
               options={{
-                strings: [
-                  "Frontend Developer",
-                  "Web Developer",
-                  "AI Developer",
-                ],
+                strings: ["Dani's Portfolio"],
                 autoStart: true,
                 loop: true,
-                delay: 75,
-                deleteSpeed: 50,
-                wrapperClassName: "pl-2",
+                delay: 100,
+                deleteSpeed: 80,
+                pauseFor: 2000,
+                cursor: "|",
+                wrapperClassName:
+                  "bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent",
               }}
             />
           </span>
-        </h2>
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg font-light text-center px-2">
+          CS Student • Frontend Developer • AI/ML Enthusiast
+        </p>
       </div>
     </div>
   );

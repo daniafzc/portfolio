@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className="antialised bg-[#0d0d1f]">
         <ResponsiveNav />
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
