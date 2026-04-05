@@ -7,11 +7,11 @@
     "source": "https://github.com/daniafzc/portfolio"
   },
   {
-    "title": "Dummy Event Website",
-    "imageSrc": "/mockupproject.jpg",
-    "description": "Developing all of the UI components from a design.",
-    "skills": ["NextJS", "Tailwind"],
-    "source": "https://github.com/daniafzc/portfolio"
+    "title": "Word Counter",
+    "imageSrc": "/wordcounter.webp",
+    "description": "Developing a word counter web application that counts the number of words in a given text input with colorful interface.",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "source": "https://github.com/daniafzc/wordcounter"
   },
   {
     "title": "DIAGONALS",
