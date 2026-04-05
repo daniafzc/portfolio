@@ -1,13 +1,10 @@
 [
   {
-    "title": "DIAGONALS",
-    "imageSrc": "/mockupproject.jpg",
-    "description": "Contributing in making the Theme Season page of a clothing brands' website.",
-    "skills": ["NextJS", "Tailwind", "Payload"],
-    "demo": "",
-    "source": "github.com/daniafzc",
-    "event": "OmahTI",
-    "year": "2026"
+    "title": "Personal Portfolio",
+    "imageSrc": "/portofixed.webp",
+    "description": "Creating a personalized portfolio website. Implemented from scratch.",
+    "skills": ["NextJS", "Tailwind"],
+    "source": "https://github.com/daniafzc/portfolio"
   },
   {
     "title": "Dummy Event Website",
@@ -20,13 +17,13 @@
     "year": "2026"
   },
   {
-    "title": "Dummy Invitation",
+    "title": "DIAGONALS",
     "imageSrc": "/mockupproject.jpg",
-    "description": "Developing all of the UI components from a design.",
-    "skills": ["NextJS", "Tailwind"],
+    "description": "Contributing in making the Theme Season page of a clothing brands' website.",
+    "skills": ["NextJS", "Tailwind", "Payload"],
     "demo": "",
-    "source": "",
-    "event": "Dummy",
+    "source": "github.com/daniafzc",
+    "event": "OmahTI",
     "year": "2026"
   }
 ]

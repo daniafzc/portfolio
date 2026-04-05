@@ -16,7 +16,7 @@ const About = () => {
         {/* image — shown first on mobile */}
         <div className="relative w-[200px] h-[260px] sm:w-[240px] sm:h-[320px] mx-auto md:hidden">
           <Image
-            src="/pp1.jpg"
+            src="/pp1.webp"
             alt="pfp"
             fill
             className="object-cover rounded-2xl shadow-lg shadow-sky-300/50"

@@ -23,7 +23,7 @@ export default function Home() {
     initAOS();
   }, []);
   return (
-    <div className="relative overflow-x-hidden">
+    <div className="">
       <Hero />
       <About />
       <Projects />

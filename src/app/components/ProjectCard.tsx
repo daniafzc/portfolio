@@ -34,7 +34,12 @@ export default function ProjectCard({ project }: { project: Project }) {
           <h2 className="p-1 my-2 font-medium text-[#1a2744] glass-text-bg w-max text-sm sm:text-base">
             {project.skills.join(", ")}
           </h2>
-          <a className="py-1.5 px-4 font-medium text-[#3a9fd6] rounded-full flex items-center cursor-default text-sm sm:text-base hover:text-[#2a8fc6] transition-colors duration-200">
+          <a
+            href={project.source}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-1.5 px-4 font-medium text-[#3a9fd6] rounded-full flex items-center cursor-default text-sm sm:text-base hover:text-[#2a8fc6] transition-colors duration-200"
+          >
             View Details
             <MdArrowOutward className="inline ml-1 text-lg sm:text-xl" />
           </a>
