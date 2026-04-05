@@ -11,19 +11,13 @@
     "imageSrc": "/mockupproject.jpg",
     "description": "Developing all of the UI components from a design.",
     "skills": ["NextJS", "Tailwind"],
-    "demo": "",
-    "source": "",
-    "event": "Dummy",
-    "year": "2026"
+    "source": "https://github.com/daniafzc/portfolio"
   },
   {
     "title": "DIAGONALS",
     "imageSrc": "/mockupproject.jpg",
     "description": "Contributing in making the Theme Season page of a clothing brands' website.",
     "skills": ["NextJS", "Tailwind", "Payload"],
-    "demo": "",
-    "source": "github.com/daniafzc",
-    "event": "OmahTI",
-    "year": "2026"
+    "source": "https://github.com/daniafzc/portfolio"
   }
 ]
