@@ -7,9 +7,7 @@ type Project = {
   imageSrc: string;
   description: string;
   skills: string[];
-  source: string;
-  event: string;
-  year: string;
+  source?: string;
 };
 
 export default function ProjectCard({ project }: { project: Project }) {
