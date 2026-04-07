@@ -25,8 +25,7 @@ const Navbar = ({ openNav }: Props) => {
         <h1
           className="text-xl sm:text-2xl font-bold font-heading"
           style={{
-            background:
-              "linear-gradient(90deg, var(--foreground), var(--primary))",
+            background: "linear-gradient(90deg, #1a2744, #3a9fd6)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}

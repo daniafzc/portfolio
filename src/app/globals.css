@@ -6,6 +6,7 @@
   --secondary: #ffd301;
   --accent: #8fc7b7;
   --primary: #3a9fd6;
+  --tertiary: #3a6080;
   --card-bg: rgba(196, 235, 241, 0.25);
   --card-border: rgba(143, 199, 215, 0.4);
 }
@@ -15,6 +16,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
   --color-accent: var(--accent);
   --font-sans: var(--font-outfit);
   --font-heading: var(--font-bricolage);

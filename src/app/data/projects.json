@@ -12,12 +12,5 @@
     "description": "Developing a word counter web application that counts the number of words in a given text input with colorful interface.",
     "skills": ["HTML", "CSS", "JavaScript"],
     "source": "https://github.com/daniafzc/wordcounter"
-  },
-  {
-    "title": "DIAGONALS",
-    "imageSrc": "/mockupproject.jpg",
-    "description": "Contributing in making the Theme Season page of a clothing brands' website.",
-    "skills": ["NextJS", "Tailwind", "Payload"],
-    "source": "https://github.com/daniafzc/portfolio"
   }
 ]

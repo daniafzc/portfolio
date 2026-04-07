@@ -22,14 +22,14 @@ export default function ProjectCard({ project }: { project: Project }) {
         />
       </div>
       <div className="flex flex-col gap-2 mt-4">
-        <h1 className="text-xl sm:text-2xl font-semibold text-[#1a2744]">
+        <h1 className="text-xl sm:text-2xl font-semibold text-foreground">
           {project.title}
         </h1>
-        <p className="text-[#3a6080] text-sm sm:text-base md:text-lg leading-relaxed">
+        <p className="text-tertiary text-sm sm:text-base md:text-lg leading-relaxed">
           {project.description}
         </p>
         <div className="flex flex-row justify-between items-center flex-wrap gap-2 mt-1">
-          <h2 className="p-1 my-2 font-medium text-[#1a2744] glass-text-bg w-max text-sm sm:text-base">
+          <h2 className="p-1 my-2 font-medium text-foreground glass-text-bg w-max text-sm sm:text-base">
             {project.skills.join(", ")}
           </h2>
           <a
