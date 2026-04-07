@@ -25,7 +25,7 @@ const ResponsiveNav = () => {
           <h1
             className="text-xl sm:text-2xl font-bold font-heading"
             style={{
-              background: "linear-gradient(90deg, foreground, primary)",
+              background: "linear-gradient(90deg, #1a2744, #3a9fd6)",
               WebkitTextFillColor: "transparent",
               WebkitBackgroundClip: "text",
             }}

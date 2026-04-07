@@ -40,7 +40,7 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
       >
         {NavLinks.map((link) => (
           <Link key={link.id} href={link.url} onClick={closeNav}>
-            <p className="text-[#1a2744] w-fit text-2xl sm:text-3xl ml-10 border-b-[1.5px] pb-1 border-[#3a9fd6] font-semibold tracking-wide hover:text-[#3a9fd6] transition-colors duration-200">
+            <p className="text-foreground w-fit text-2xl sm:text-3xl ml-10 border-b-[1.5px] pb-1 border-primary font-semibold tracking-wide hover:text-primary transition-colors duration-200">
               {link.label}
             </p>
           </Link>
@@ -49,7 +49,7 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
         {/* Close button */}
         <button
           onClick={closeNav}
-          className="absolute top-4 right-4 text-[#1a2744] hover:text-[#3a9fd6] transition-colors duration-200"
+          className="absolute top-4 right-4 text-foreground hover:text-primary transition-colors duration-200"
           aria-label="Close menu"
         >
           <CgClose className="w-6 h-6 sm:w-7 sm:h-7" />
