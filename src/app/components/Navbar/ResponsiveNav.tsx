@@ -25,7 +25,7 @@ const ResponsiveNav = () => {
           <h1
             className="text-xl sm:text-2xl font-bold font-heading"
             style={{
-              background: "linear-gradient(90deg, #1a2744, #3a9fd6)",
+              background: "linear-gradient(90deg, foreground, primary)",
               WebkitTextFillColor: "transparent",
               WebkitBackgroundClip: "text",
             }}
@@ -39,7 +39,7 @@ const ResponsiveNav = () => {
               <Link
                 key={link.id}
                 href={link.url}
-                className="text-[#1a2744] font-medium text-base transition-colors duration-200 hover:text-[#3a9fd6]"
+                className="text-foreground font-medium text-base transition-colors duration-200 hover:text-primary"
               >
                 {link.label}
               </Link>
@@ -52,7 +52,7 @@ const ResponsiveNav = () => {
             onClick={() => setShowNav(true)}
             aria-label="Open menu"
           >
-            <HiBars3BottomRight className="w-7 h-7 text-[#1a2744]" />
+            <HiBars3BottomRight className="w-7 h-7 text-foreground" />
           </button>
         </nav>
       </div>
@@ -86,7 +86,7 @@ const ResponsiveNav = () => {
       >
         {NavLinks.map((link) => (
           <Link key={link.id} href={link.url} onClick={() => setShowNav(false)}>
-            <p className="text-[#1a2744] w-fit text-xl sm:text-2xl ml-10 border-b-[1.5px] pb-1 border-[#3a9fd6] font-semibold tracking-wide hover:text-[#3a9fd6] transition-colors duration-200">
+            <p className="text-foreground w-fit text-xl sm:text-2xl ml-10 border-b-[1.5px] pb-1 border-primary font-semibold tracking-wide hover:text-primary transition-colors duration-200">
               {link.label}
             </p>
           </Link>
@@ -95,7 +95,7 @@ const ResponsiveNav = () => {
         {/* Close button */}
         <button
           onClick={() => setShowNav(false)}
-          className="absolute top-4 right-4 text-[#1a2744] hover:text-[#3a9fd6] transition-colors duration-200"
+          className="absolute top-4 right-4 text-foreground hover:text-primary transition-colors duration-200"
           aria-label="Close menu"
         >
           <CgClose className="w-6 h-6 sm:w-7 sm:h-7" />

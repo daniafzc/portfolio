@@ -25,7 +25,7 @@ const Navbar = ({ openNav }: Props) => {
         <h1
           className="text-xl sm:text-2xl font-bold font-heading"
           style={{
-            background: "linear-gradient(90deg, #1a2744, #FFD301)",
+            background: "linear-gradient(90deg, foreground, secondary)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -39,7 +39,7 @@ const Navbar = ({ openNav }: Props) => {
             <Link
               key={link.id}
               href={link.url}
-              className="text-[#1a2744] font-medium text-base transition-colors duration-200 hover:text-[#3a9fd6]"
+              className="text-[foreground] font-medium text-base transition-colors duration-200 hover:text-[#3a9fd6]"
             >
               {link.label}
             </Link>
@@ -48,7 +48,7 @@ const Navbar = ({ openNav }: Props) => {
 
         {/* Mobile burger */}
         <button className="lg:hidden" onClick={openNav} aria-label="Open menu">
-          <HiBars3BottomRight className="w-7 h-7 text-[#1a2744]" />
+          <HiBars3BottomRight className="w-7 h-7 text-[foreground]" />
         </button>
       </nav>
     </div>
