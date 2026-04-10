@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Skills from "./components/Skills";
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <Skills />
       <Contact />
     </div>
   );

@@ -68,7 +68,7 @@ const Contact = () => {
             </h2>
             <div className="grid grid-cols-2 gap-3 sm:gap-6">
               {contact.map((cont) => (
-                <Tilt key={cont.name} scale={1.5} transitionSpeed={400}>
+                <Tilt key={cont.name} scale={1.2} transitionSpeed={400}>
                   <Link
                     href={cont.url}
                     target="_blank"
